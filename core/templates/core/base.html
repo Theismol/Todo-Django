@@ -8,7 +8,7 @@
     </head>
     <body>
         <nav class="py-6 px-6 flex justify-between items-center border-b border-gray-200">
-            <a href="/" class="text-xl font-semibold">Todo</a>
+            <a href="/" class="text-xl font-semibold">Todo App</a>
             <div>
                 {% if user.is_authenticated %}
                 <a href="{% url 'core:logout' %}" class="bg-teal-200 rounded-xl px-4 py-4 hover:bg-teal-400 font-semibold">Log out</a>
