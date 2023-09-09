@@ -1,0 +1,21 @@
+{% extends 'core/base.html' %}
+
+{% block title %}Completed todos {% endblock %}
+
+
+{% block content %}
+    <div class="bg-gray-200">
+        <div>
+            {% for todo in todos %}
+                <div>
+                    <h2 class="inline-block font-semibold" >{{ todo.title }}</h2>
+                    <a href="{% url 'core:edit_todo' todo.id %}" class="px-2 rounded-xl bg-teal-200">Edit</a>
+                    <a href="{% url 'core:delete_todo' todo.id %}" class="px-2 rounded-xl bg-red-400">Delete</a>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
+
+
+{% endblock %}
